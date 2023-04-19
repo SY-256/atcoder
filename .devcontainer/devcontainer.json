@@ -1,0 +1,64 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/ubuntu
+{
+	"name": "Ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
+		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
+		"args": {
+			"VARIANT": "ubuntu-20.04"
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install -r requirements.txt",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode",
+	"features": {
+		"python": "3.8"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"extensions.verifySignature": false,
+				"terminal.integrated.profiles.linux": {
+					"bash (login)": {
+						"path": "bash",
+						"args": [
+							"-l"
+						]
+					}
+				},
+				"editor.formatOnSave": true,
+				"python.languageServer": "Pylance",
+				"python.pythonPath": "/usr/bin/python3",
+				"python.linting.flake8Args": [
+					"--max-line-length", // 1 行あたりの文字数を 110 に設定
+					"110"
+				],
+				"python.formatting.provider": "autopep8",
+				"python.formatting.autopep8Args": [
+					"--max-line-length", // 1 行あたりの文字数を 110 に設定
+					"110"
+				],
+				"[cpp]": {
+					"editor.tabSize": 2,
+					"editor.defaultFormatter": "xaver.clang-format" // 拡張機能 Clang-Format を選択
+				}
+			},
+			"extensions": [
+				"visualstudioexptteam.vscodeintellicode",
+				"ms-vscode.cpptools",
+				"xaver.clang-format",
+				"donjayamanne.git-extension-pack",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"coenraads.bracket-pair-colorizer-2",
+				"shardulm94.trailing-spaces",
+				"vscodevim.vim"
+			]
+		}
+	}
+}

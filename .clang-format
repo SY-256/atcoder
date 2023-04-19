@@ -1,0 +1,9 @@
+ColumnLimit: 110
+AllowShortBlocksOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: true
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBinaryOperators: NonAssignment
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IndentWidth: 2
