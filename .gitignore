@@ -226,6 +226,6 @@ pyrightconfig.json
 .ionide
 
 ### bin/
-bin/
+**/bin/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,c++
