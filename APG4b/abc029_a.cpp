@@ -7,11 +7,9 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 
 int main() {
-  int N;
-  cin >> N;
+  string W;
+  cin >> W;
 
-  int ans = 0;
-
-  cout << ans << endl;
+  cout << W << 's' << endl;
   return 0;
 }

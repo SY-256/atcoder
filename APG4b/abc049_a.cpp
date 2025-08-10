@@ -7,10 +7,11 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 
 int main() {
-  int N;
-  cin >> N;
+  char c;
+  cin >> c;
 
-  int ans = 0;
+  string ans = "consonant";
+  if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') { ans = "vowel"; }
 
   cout << ans << endl;
   return 0;

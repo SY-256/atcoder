@@ -7,11 +7,20 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 
 int main() {
-  int N;
-  cin >> N;
+  string n;
+  cin >> n;
 
-  int ans = 0;
+  int sum = 0;
+  for (char c : n) {
+    int digit = c - '0';
+    sum += digit;
+  }
+  int digit_n = stoi(n);
+  if (digit_n % sum == 0) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
+  }
 
-  cout << ans << endl;
   return 0;
 }

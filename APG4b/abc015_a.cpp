@@ -7,11 +7,11 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 
 int main() {
-  int N;
-  cin >> N;
+  string A, B;
+  cin >> A >> B;
 
-  int ans = 0;
-
+  string ans = A;
+  if (A.size() < B.size()) ans = B;
   cout << ans << endl;
   return 0;
 }
